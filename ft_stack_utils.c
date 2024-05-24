@@ -6,12 +6,17 @@
 /*   By: dalabrad <dalabrad@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/22 15:06:59 by dalabrad          #+#    #+#             */
-/*   Updated: 2024/05/22 15:56:29 by dalabrad         ###   ########.fr       */
+/*   Updated: 2024/05/24 12:29:06 by dalabrad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
+/*
+ *
+ * Function returns the last node of a linked list
+ * 
+*/
 t_stack_node	*ft_last_node(t_stack_node *node)
 {
 	if (!node)
@@ -21,6 +26,11 @@ t_stack_node	*ft_last_node(t_stack_node *node)
 	return (node);
 }
 
+/*
+ *
+ * Function appends a node->value = nbr to the stack
+ * 
+*/
 void	ft_append_node(t_stack_node **stack, int nbr)
 {
 	t_stack_node	*node;
