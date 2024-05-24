@@ -6,7 +6,7 @@
 /*   By: dalabrad <dalabrad@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/20 16:10:54 by dalabrad          #+#    #+#             */
-/*   Updated: 2024/05/24 14:04:36 by dalabrad         ###   ########.fr       */
+/*   Updated: 2024/05/24 15:22:34 by dalabrad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,17 +30,33 @@ typedef struct s_stack_node
 	struct s_stack_node	*prev;
 }	t_stack_node;
 
+//	ft_stack_init.c
 void			ft_stack_init(t_stack_node **a, char **argv, bool flag_argc_2);
+
+//	ft_error_free.c
 void			ft_free_tab(char **tab);
 void			ft_free_stack(t_stack_node **stack);
 void			ft_error_free(t_stack_node **a, char **argv, bool flag_argc_2);
 bool			ft_error_syntax(char *str);
 bool			ft_error_repetition(t_stack_node *a, int nbr);
+
+//	ft_stack_utils.c
 t_stack_node	*ft_last_node(t_stack_node *node);
 void			ft_append_node(t_stack_node **stack, int nbr);
+int				ft_stack_size(t_stack_node *node);
+
+//	ft_push_command.c
 void			ft_pa(t_stack_node **a, t_stack_node **b, bool checker);
 void			ft_pb(t_stack_node **b, t_stack_node **a, bool checker);
+
+//	ft_swap_command.c
+void			ft_sa(t_stack_node	**a, bool checker);
+void			ft_sb(t_stack_node	**b, bool checker);
+void			ft_ss(t_stack_node	**a, t_stack_node	**b, bool checker);
+
+//-----------------------------------------------------------------------------
 //test utils : delete before finishing the project
 void			ft_print_stack(t_stack_node	*node);
-//------------------------------------------------------------
+void			ft_print_stack_reverse(t_stack_node	*node);
+//-----------------------------------------------------------------------------
 #endif
