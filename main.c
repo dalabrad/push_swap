@@ -6,7 +6,7 @@
 /*   By: dalabrad <dalabrad@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/20 16:16:32 by dalabrad          #+#    #+#             */
-/*   Updated: 2024/05/24 15:41:57 by dalabrad         ###   ########.fr       */
+/*   Updated: 2024/05/27 14:55:03 by dalabrad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,7 @@ int	main(int argc, char **argv)
 	}
 	a = NULL;
 	b = NULL;
-	ft_stack_init(&a, argv, argc == 2);
+	/* ft_stack_init(&a, argv, argc == 2);
 	ft_printf("Stack a:\n");
 	ft_print_stack_reverse(a);
 	ft_printf("\nStack b:\n");
@@ -104,6 +104,40 @@ int	main(int argc, char **argv)
 	ft_print_stack(a);
 	ft_print_stack_reverse(a);
 	ft_printf ("Stack b after ss:\n");
+	ft_print_stack(b);
+	ft_print_stack_reverse(b);
+	ft_free_stack(&a);
+	ft_free_stack(&b);
+	a = NULL;
+	b = NULL; */
+	ft_printf("\n=====================================================\n");
+	ft_stack_init(&a, argv, argc == 2);
+	ft_stack_init(&b, argv, argc == 2);
+	ft_printf ("Stack a:\n");
+	ft_print_stack(a);
+	ft_print_stack_reverse(a);
+	ft_printf ("Stack b:\n");
+	ft_print_stack(b);
+	ft_print_stack_reverse(b);
+	ft_printf("\n--------------------\n\n");
+	ft_ra(&a, false);
+	ft_printf("\n--------------------\n\n");
+	ft_printf ("Stack a after ra:\n");
+	ft_print_stack(a);
+	ft_print_stack_reverse(a);
+	ft_printf("\n--------------------\n\n");
+	ft_rb(&b, false);
+	ft_printf("\n--------------------\n\n");
+	ft_printf ("Stack b after rb:\n");
+	ft_print_stack(b);
+	ft_print_stack_reverse(b);
+	ft_printf("\n--------------------\n\n");
+	ft_rr(&a, &b, false);
+	ft_printf("\n--------------------\n\n");
+	ft_printf ("Stack a after rr:\n");
+	ft_print_stack(a);
+	ft_print_stack_reverse(a);
+	ft_printf ("\nStack b after rr:\n");
 	ft_print_stack(b);
 	ft_print_stack_reverse(b);
 	ft_free_stack(&a);

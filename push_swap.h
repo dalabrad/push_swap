@@ -6,7 +6,7 @@
 /*   By: dalabrad <dalabrad@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/20 16:10:54 by dalabrad          #+#    #+#             */
-/*   Updated: 2024/05/24 15:22:34 by dalabrad         ###   ########.fr       */
+/*   Updated: 2024/05/27 14:55:48 by dalabrad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,6 +53,16 @@ void			ft_pb(t_stack_node **b, t_stack_node **a, bool checker);
 void			ft_sa(t_stack_node	**a, bool checker);
 void			ft_sb(t_stack_node	**b, bool checker);
 void			ft_ss(t_stack_node	**a, t_stack_node	**b, bool checker);
+
+//ft_rotate_command.c
+void			ft_ra(t_stack_node **a, bool checker);
+void			ft_rb(t_stack_node **b, bool checker);
+void			ft_rr(t_stack_node **a, t_stack_node **b, bool checker);
+
+//ft_reverse_rotate_command.c
+void			ft_rra(t_stack_node **a, bool checker);
+void			ft_rrb(t_stack_node **b, bool checker);
+void			ft_rrr(t_stack_node **a, t_stack_node **b, bool checker);
 
 //-----------------------------------------------------------------------------
 //test utils : delete before finishing the project
