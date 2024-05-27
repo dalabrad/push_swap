@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_reverse_reverse_rotate_command.c                        :+:      :+:    :+:   */
+/*   ft_reverse_rotate_command.c                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dalabrad <dalabrad@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/05/27 14:25:38 by dalabrad          #+#    #+#             */
-/*   Updated: 2024/05/27 14:25:38 by dalabrad         ###   ########.fr       */
+/*   Created: 2024/05/27 15:05:15 by dalabrad          #+#    #+#             */
+/*   Updated: 2024/05/27 15:06:32 by dalabrad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,11 +28,11 @@ static void	ft_reverse_rotate(t_stack_node **stack)
 	if (!stack || !*stack || size == 1)
 		return ;
 	last_node = ft_last_node(*stack);
-    last_node->prev->next = NULL;
+	last_node->prev->next = NULL;
 	last_node->next = *stack;
-    (*stack)->prev = last_node;
-    last_node->prev = NULL;
-    *stack = last_node;
+	(*stack)->prev = last_node;
+	last_node->prev = NULL;
+	*stack = last_node;
 }
 
 /*
