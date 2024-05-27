@@ -6,7 +6,7 @@
 /*   By: dalabrad <dalabrad@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/20 16:10:54 by dalabrad          #+#    #+#             */
-/*   Updated: 2024/05/27 14:55:48 by dalabrad         ###   ########.fr       */
+/*   Updated: 2024/05/27 17:18:12 by dalabrad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -63,6 +63,10 @@ void			ft_rr(t_stack_node **a, t_stack_node **b, bool checker);
 void			ft_rra(t_stack_node **a, bool checker);
 void			ft_rrb(t_stack_node **b, bool checker);
 void			ft_rrr(t_stack_node **a, t_stack_node **b, bool checker);
+
+//ft_sort_three.c
+bool			ft_stack_sorted(t_stack_node *node);
+void			ft_sort_three(t_stack_node **a);
 
 //-----------------------------------------------------------------------------
 //test utils : delete before finishing the project

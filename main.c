@@ -6,7 +6,7 @@
 /*   By: dalabrad <dalabrad@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/20 16:16:32 by dalabrad          #+#    #+#             */
-/*   Updated: 2024/05/27 14:55:03 by dalabrad         ###   ########.fr       */
+/*   Updated: 2024/05/27 17:26:32 by dalabrad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ int	main(int argc, char **argv)
 {
 	char			*tmp;
 	t_stack_node	*a;
-	t_stack_node	*b;
+	//t_stack_node	*b;
 
 	if (argc == 1 || (argc == 2 && !argv[1][0]))
 		return (1);
@@ -28,7 +28,7 @@ int	main(int argc, char **argv)
 		tmp = NULL;
 	}
 	a = NULL;
-	b = NULL;
+	//b = NULL;
 	/* ft_stack_init(&a, argv, argc == 2);
 	ft_printf("Stack a:\n");
 	ft_print_stack_reverse(a);
@@ -110,7 +110,7 @@ int	main(int argc, char **argv)
 	ft_free_stack(&b);
 	a = NULL;
 	b = NULL; */
-	ft_printf("\n=====================================================\n");
+	/* ft_printf("\n=====================================================\n");
 	ft_stack_init(&a, argv, argc == 2);
 	ft_stack_init(&b, argv, argc == 2);
 	ft_printf ("Stack a:\n");
@@ -144,5 +144,16 @@ int	main(int argc, char **argv)
 	ft_free_stack(&b);
 	a = NULL;
 	b = NULL;
+ */
+	ft_stack_init(&a, argv, argc == 2);
+	ft_printf("Stack a:\n");
+	ft_print_stack(a);
+	ft_printf("\n-------------------------------------\n\n");
+	ft_sort_three(&a);
+	ft_printf("\n-------------------------------------\n");
+	ft_printf("Stack a after ft_sort_three():\n");
+	ft_print_stack(a);
+	ft_free_stack(&a);
+	a = NULL;
 	return (0);
 }
