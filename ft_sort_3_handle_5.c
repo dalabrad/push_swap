@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_sort_three.c                                    :+:      :+:    :+:   */
+/*   ft_sort_3_handle_5.c                               :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dalabrad <dalabrad@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/27 16:35:18 by dalabrad          #+#    #+#             */
-/*   Updated: 2024/05/27 17:13:47 by dalabrad         ###   ########.fr       */
+/*   Updated: 2024/05/29 18:41:36 by dalabrad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -79,4 +79,20 @@ void	ft_sort_three(t_stack_node **a)
 		ft_rra(a, false);
 	if ((*a)->value > (*a)->next->value)
 		ft_sa(a, false);
+}
+
+/*
+ * Function to handle a stack of 5 nodes before
+ * the main algorithm in push_swap_command
+*/
+void	ft_handle_five(t_stack_node **a, t_stack_node **b)
+{
+	if (!a || !*a || ft_stack_size(*a) != 5)
+		return ;
+	while (ft_stack_size(*a) > 3)
+	{
+		ft_init_nodes(*a, *b);
+		ft_finish_rotation(a, find_smallest(*a), 'a');
+		ft_pb(b, a, false);
+	}
 }
