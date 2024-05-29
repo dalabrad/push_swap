@@ -6,7 +6,7 @@
 /*   By: dalabrad <dalabrad@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/22 15:06:59 by dalabrad          #+#    #+#             */
-/*   Updated: 2024/05/29 15:46:50 by dalabrad         ###   ########.fr       */
+/*   Updated: 2024/05/29 19:10:12 by dalabrad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -60,6 +60,7 @@ void	ft_append_node(t_stack_node **stack, int nbr)
  *
  * Functions returns the size (number of nodes) of
  * the stack given the first node.
+ * 
 */
 int	ft_stack_size(t_stack_node *node)
 {
@@ -74,4 +75,30 @@ int	ft_stack_size(t_stack_node *node)
 		node = node->next;
 	}
 	return (size);
+}
+
+/*
+ *
+ * Functions returns the pointer to the node
+ * with the smallest value.
+ * 
+*/
+t_stack_node	*ft_find_smallest(t_stack_node *node)
+{
+	t_stack_node	*smallest_node;
+	long			smallest_value;
+
+	if (!node)
+		return (NULL);
+	smallest_value = LONG_MAX;
+	while (node)
+	{
+		if (node->value < smallest_value)
+		{
+			smallest_node = node;
+			smallest_value = node->value;
+		}
+		node = node->next;
+	}
+	return (smallest_node);
 }
