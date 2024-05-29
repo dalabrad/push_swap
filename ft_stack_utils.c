@@ -6,7 +6,7 @@
 /*   By: dalabrad <dalabrad@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/22 15:06:59 by dalabrad          #+#    #+#             */
-/*   Updated: 2024/05/29 13:31:43 by dalabrad         ###   ########.fr       */
+/*   Updated: 2024/05/29 15:46:50 by dalabrad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,6 +56,11 @@ void	ft_append_node(t_stack_node **stack, int nbr)
 	}
 }
 
+/*
+ *
+ * Functions returns the size (number of nodes) of
+ * the stack given the first node.
+*/
 int	ft_stack_size(t_stack_node *node)
 {
 	int	size;
