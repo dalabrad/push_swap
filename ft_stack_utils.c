@@ -6,7 +6,7 @@
 /*   By: dalabrad <dalabrad@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/22 15:06:59 by dalabrad          #+#    #+#             */
-/*   Updated: 2024/05/24 12:29:06 by dalabrad         ###   ########.fr       */
+/*   Updated: 2024/05/29 13:31:43 by dalabrad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,4 +54,19 @@ void	ft_append_node(t_stack_node **stack, int nbr)
 		last_node->next = node;
 		node->prev = last_node;
 	}
+}
+
+int	ft_stack_size(t_stack_node *node)
+{
+	int	size;
+
+	if (!node)
+		return (0);
+	size = 0;
+	while (node)
+	{
+		size++;
+		node = node->next;
+	}
+	return (size);
 }
