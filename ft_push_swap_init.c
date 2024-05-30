@@ -6,7 +6,7 @@
 /*   By: dalabrad <dalabrad@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/29 16:38:31 by dalabrad          #+#    #+#             */
-/*   Updated: 2024/05/30 11:21:07 by dalabrad         ###   ########.fr       */
+/*   Updated: 2024/05/30 11:38:16 by dalabrad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -76,8 +76,6 @@ static void	ft_set_target_node(t_stack_node *a,
 			b->target_node = target_node;
 		b = b->next;
 	}
-
-
 }
 
 /*
@@ -97,7 +95,7 @@ void	ft_set_price(t_stack_node *a, t_stack_node *b)
 {
 	int	size_a;
 	int	size_b;
-	
+
 	if (!b || !a)
 		return ;
 	size_a = ft_stack_size(a);
