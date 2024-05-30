@@ -6,7 +6,7 @@
 /*   By: dalabrad <dalabrad@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/22 15:06:59 by dalabrad          #+#    #+#             */
-/*   Updated: 2024/05/29 19:10:12 by dalabrad         ###   ########.fr       */
+/*   Updated: 2024/05/30 11:37:16 by dalabrad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -101,4 +101,17 @@ t_stack_node	*ft_find_smallest(t_stack_node *node)
 		node = node->next;
 	}
 	return (smallest_node);
+}
+
+t_stack_node	*ft_find_cheapest(t_stack_node *node)
+{
+	if (!node)
+		return (NULL);
+	while (node)
+	{
+		if (node->cheapest)
+			return (node);
+		node = node->next;
+	}
+	return (NULL);
 }
