@@ -6,7 +6,7 @@
 /*   By: dalabrad <dalabrad@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/20 16:10:54 by dalabrad          #+#    #+#             */
-/*   Updated: 2024/05/30 11:21:50 by dalabrad         ###   ########.fr       */
+/*   Updated: 2024/05/30 11:37:09 by dalabrad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,6 +48,7 @@ t_stack_node	*ft_last_node(t_stack_node *node);
 void			ft_append_node(t_stack_node **stack, int nbr);
 int				ft_stack_size(t_stack_node *node);
 t_stack_node	*ft_find_smallest(t_stack_node *node);
+t_stack_node	*ft_find_cheapest(t_stack_node *node);
 
 //	ft_push_command.c
 
