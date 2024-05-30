@@ -6,7 +6,7 @@
 /*   By: dalabrad <dalabrad@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/27 16:35:18 by dalabrad          #+#    #+#             */
-/*   Updated: 2024/05/29 18:41:36 by dalabrad         ###   ########.fr       */
+/*   Updated: 2024/05/30 16:24:45 by dalabrad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -92,7 +92,7 @@ void	ft_handle_five(t_stack_node **a, t_stack_node **b)
 	while (ft_stack_size(*a) > 3)
 	{
 		ft_init_nodes(*a, *b);
-		ft_finish_rotation(a, find_smallest(*a), 'a');
+		ft_finish_rotation(a, ft_find_smallest(*a), 'a');
 		ft_pb(b, a, false);
 	}
 }
