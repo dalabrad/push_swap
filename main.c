@@ -6,7 +6,7 @@
 /*   By: dalabrad <dalabrad@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/20 16:16:32 by dalabrad          #+#    #+#             */
-/*   Updated: 2024/05/27 17:26:32 by dalabrad         ###   ########.fr       */
+/*   Updated: 2024/05/30 16:45:03 by dalabrad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,8 +16,10 @@ int	main(int argc, char **argv)
 {
 	char			*tmp;
 	t_stack_node	*a;
-	//t_stack_node	*b;
+	t_stack_node	*b;
 
+	a = NULL;
+	b = NULL;
 	if (argc == 1 || (argc == 2 && !argv[1][0]))
 		return (1);
 	else if (argc == 2)
@@ -27,133 +29,18 @@ int	main(int argc, char **argv)
 		free(tmp);
 		tmp = NULL;
 	}
-	a = NULL;
-	//b = NULL;
-	/* ft_stack_init(&a, argv, argc == 2);
-	ft_printf("Stack a:\n");
-	ft_print_stack_reverse(a);
-	ft_printf("\nStack b:\n");
-	ft_print_stack_reverse(b);
-	ft_printf("\n--------------------\n\n");
-	ft_pb(&b, &a, false);
-	ft_printf("\n--------------------\n\n");
-	ft_printf("\nStack a after pb:\n");
-	ft_print_stack_reverse(a);
-	ft_printf("\nStack b after pb:\n");
-	ft_print_stack_reverse(b);
-	ft_free_stack(&a);
-	ft_free_stack(&b);
-	a = NULL;
-	b = NULL;
-	ft_printf("\n=====================================================\n");
-	ft_stack_init(&b, argv, argc == 2);
-	ft_printf("Stack a:\n");
-	ft_print_stack_reverse(a);
-	ft_printf("\nStack b:\n");
-	ft_print_stack_reverse(b);
-	ft_printf("\n--------------------\n\n");
-	ft_pa(&a, &b, false);
-	ft_printf("\n--------------------\n\n");
-	ft_printf("\nStack a after pb:\n");
-	ft_print_stack_reverse(a);
-	ft_printf("\nStack b after pb:\n");
-	ft_print_stack_reverse(b);
-	ft_free_stack(&a);
-	ft_free_stack(&b);
-	a = NULL;
-	b = NULL;
-	ft_printf("\n=====================================================\n");
-	ft_stack_init(&a, argv, argc == 2);
-	ft_printf ("Stack a:\n");
-	ft_print_stack(a);
-	ft_print_stack_reverse(a);
-	ft_printf("\n--------------------\n\n");
-	ft_sa(&a, false);
-	ft_printf("\n--------------------\n\n");
-	ft_printf ("Stack a after sa:\n");
-	ft_print_stack(a);
-	ft_print_stack_reverse(a);
+	ft_stack_init(&a, argv, 2 == argc);
+	if (!ft_stack_sorted(a))
+	{
+		if (ft_stack_size(a) == 2)
+			ft_sa(&a, false);
+		else if (ft_stack_size(a) == 3)
+			ft_sort_three(&a);
+		else
+			ft_push_swap(&a, &b);
+	}
 	ft_free_stack(&a);
 	a = NULL;
-	ft_printf("\n=====================================================\n");
-	ft_stack_init(&b, argv, argc == 2);
-	ft_printf ("Stack b:\n");
-	ft_print_stack(b);
-	ft_print_stack_reverse(b);
-	ft_printf("\n--------------------\n\n");
-	ft_sb(&b, false);
-	ft_printf("\n--------------------\n\n");
-	ft_printf ("Stack b after sb:\n");
-	ft_print_stack(b);
-	ft_print_stack_reverse(b);
-	ft_free_stack(&b);
-	b = NULL;
-	ft_printf("\n=====================================================\n");
-	ft_stack_init(&a, argv, argc == 2);
-	ft_stack_init(&b, argv, argc == 2);
-	ft_printf ("Stack a:\n");
-	ft_print_stack(a);
-	ft_print_stack_reverse(a);
-	ft_printf ("Stack b:\n");
-	ft_print_stack(b);
-	ft_print_stack_reverse(b);
-	ft_printf("\n--------------------\n\n");
-	ft_ss(&a, &b, false);
-	ft_printf("\n--------------------\n\n");
-	ft_printf ("Stack a after ss:\n");
-	ft_print_stack(a);
-	ft_print_stack_reverse(a);
-	ft_printf ("Stack b after ss:\n");
-	ft_print_stack(b);
-	ft_print_stack_reverse(b);
-	ft_free_stack(&a);
-	ft_free_stack(&b);
-	a = NULL;
-	b = NULL; */
-	/* ft_printf("\n=====================================================\n");
-	ft_stack_init(&a, argv, argc == 2);
-	ft_stack_init(&b, argv, argc == 2);
-	ft_printf ("Stack a:\n");
-	ft_print_stack(a);
-	ft_print_stack_reverse(a);
-	ft_printf ("Stack b:\n");
-	ft_print_stack(b);
-	ft_print_stack_reverse(b);
-	ft_printf("\n--------------------\n\n");
-	ft_ra(&a, false);
-	ft_printf("\n--------------------\n\n");
-	ft_printf ("Stack a after ra:\n");
-	ft_print_stack(a);
-	ft_print_stack_reverse(a);
-	ft_printf("\n--------------------\n\n");
-	ft_rb(&b, false);
-	ft_printf("\n--------------------\n\n");
-	ft_printf ("Stack b after rb:\n");
-	ft_print_stack(b);
-	ft_print_stack_reverse(b);
-	ft_printf("\n--------------------\n\n");
-	ft_rr(&a, &b, false);
-	ft_printf("\n--------------------\n\n");
-	ft_printf ("Stack a after rr:\n");
-	ft_print_stack(a);
-	ft_print_stack_reverse(a);
-	ft_printf ("\nStack b after rr:\n");
-	ft_print_stack(b);
-	ft_print_stack_reverse(b);
-	ft_free_stack(&a);
-	ft_free_stack(&b);
-	a = NULL;
-	b = NULL;
- */
-	ft_stack_init(&a, argv, argc == 2);
-	ft_printf("Stack a:\n");
-	ft_print_stack(a);
-	ft_printf("\n-------------------------------------\n\n");
-	ft_sort_three(&a);
-	ft_printf("\n-------------------------------------\n");
-	ft_printf("Stack a after ft_sort_three():\n");
-	ft_print_stack(a);
-	ft_free_stack(&a);
-	a = NULL;
+	ft_printf("END\n");
 	return (0);
 }
