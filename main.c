@@ -6,12 +6,17 @@
 /*   By: dalabrad <dalabrad@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/20 16:16:32 by dalabrad          #+#    #+#             */
-/*   Updated: 2024/05/30 17:20:23 by dalabrad         ###   ########.fr       */
+/*   Updated: 2024/05/31 13:01:25 by dalabrad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
+/*
+ * This function transform the case argc = 2: 
+ * 		~ ORIGINAL INPUT: argv[1] = "n1 n2 n3 n4 ..."
+ * 		~ AFTER FUNCTION: argv[1] = "n1", argv[2] = "n2" ...
+*/
 char	**ft_transform_argv(char *argv1)
 {
 	char	*tmp;
