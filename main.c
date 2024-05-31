@@ -6,7 +6,7 @@
 /*   By: dalabrad <dalabrad@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/20 16:16:32 by dalabrad          #+#    #+#             */
-/*   Updated: 2024/05/31 13:01:25 by dalabrad         ###   ########.fr       */
+/*   Updated: 2024/05/31 15:17:52 by dalabrad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,6 +52,6 @@ int	main(int argc, char **argv)
 	}
 	ft_free_stack(&a);
 	a = NULL;
-	ft_printf("END\n");
+	ft_printf("");
 	return (0);
 }
