@@ -6,7 +6,7 @@
 /*   By: dalabrad <dalabrad@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/29 16:57:04 by dalabrad          #+#    #+#             */
-/*   Updated: 2024/05/30 16:24:09 by dalabrad         ###   ########.fr       */
+/*   Updated: 2024/05/31 12:53:49 by dalabrad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -102,7 +102,7 @@ static void	ft_push_nodes(t_stack_node **a, t_stack_node **b)
 }
 
 /*
- * ~Agorith that pushes all nodes in B until having 3 in A
+ * ~Algorithm that pushes all nodes in B until having 3 in A
  * ~For every configuration choose the "cheapest_node"
  * ~Push everything back in A in order
 */
