@@ -6,7 +6,7 @@
 /*   By: dalabrad <dalabrad@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/22 13:10:17 by dalabrad          #+#    #+#             */
-/*   Updated: 2024/05/24 14:03:03 by dalabrad         ###   ########.fr       */
+/*   Updated: 2024/05/31 16:47:29 by dalabrad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,16 +53,16 @@ void	ft_free_stack(t_stack_node **stack)
 
 /*
  * Function to free a stack (a), and the tab (argv) 
- * if flag_argc_2 = (argc == 2) = TRUE. Then shows a error
- * message in the screen and executes exit(1) to end the 
- * main with a return (1)
+ * if flag_argc_2 = (argc == 2) = TRUE. Then wites a
+ * stderror : "Error\n" and executes exit(1) to end 
+ * the main with a return (1)
 */
 void	ft_error_free(t_stack_node **a, char **argv, bool flag_argc_2)
 {
 	ft_free_stack(a);
 	if (flag_argc_2)
 		ft_free_tab(argv);
-	ft_printf("Error\n");
+	write(2, "Error\n", 7);
 	exit (1);
 }
 
