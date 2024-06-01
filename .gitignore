@@ -7,3 +7,16 @@
 push_swap
 
 checker
+
+checker_linux
+
+push_swap_test_linux.sh
+
+push_swap_test.sh
+
+traces.txt
+
+pro_checker
+
+checker_Mac
+
