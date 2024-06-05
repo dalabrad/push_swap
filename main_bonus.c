@@ -6,7 +6,7 @@
 /*   By: dalabrad <dalabrad@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/31 18:29:23 by dalabrad          #+#    #+#             */
-/*   Updated: 2024/05/31 20:01:47 by dalabrad         ###   ########.fr       */
+/*   Updated: 2024/06/05 11:53:06 by dalabrad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,6 +29,11 @@ static char	**ft_transform_argv(char *argv1)
 	return (rtrn);
 }
 
+/*
+ * This function checks the line to verify if 
+ * it is a valid command. Returns true if valid
+ * or prints Error\n and returns false if not valid.
+*/
 static bool	ft_valid_line(char *line)
 {
 	if (!ft_strncmp(line, "pa\n", ft_strlen(line))
@@ -50,6 +55,11 @@ static bool	ft_valid_line(char *line)
 	}
 }
 
+/*
+ * This function applys the commands read in line
+ * to the stacks a and b.
+ * 
+*/
 static void	ft_line_command(char *line, t_stack_node **a, t_stack_node **b)
 {
 	if (!ft_strncmp(line, "pa\n", ft_strlen(line)))
@@ -76,6 +86,12 @@ static void	ft_line_command(char *line, t_stack_node **a, t_stack_node **b)
 		ft_ss(a, b, true);
 }
 
+/*
+ * This function prints the result of the checker and frees the
+ * stacks, a is always freed, and b only if it has any node left: 
+ * 		~ OK\n: if stack a sorted and b empty.
+ * 		~ KO\n: a not sorted or b has any nodes (./push_swap not OK). 
+*/
 static void	ft_print_result_free(t_stack_node **a, t_stack_node **b)
 {
 	if (ft_stack_sorted(*a) && ft_stack_size(*b) == 0)
