@@ -6,7 +6,7 @@
 /*   By: dalabrad <dalabrad@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/20 16:10:54 by dalabrad          #+#    #+#             */
-/*   Updated: 2024/05/30 16:35:38 by dalabrad         ###   ########.fr       */
+/*   Updated: 2024/06/05 13:07:29 by dalabrad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -86,17 +86,17 @@ void			ft_set_price(t_stack_node *a, t_stack_node *b);
 void			ft_set_cheapest(t_stack_node *b);
 void			ft_init_nodes(t_stack_node *a, t_stack_node *b);
 
+//ft_push_swap_utils.c 
+
+int				ft_max(int n, int m);
+bool			ft_both_ab_median(t_stack_node *b);
+void			ft_print_stack(t_stack_node	*node);
+void			ft_print_stack_reverse(t_stack_node	*node);
+
 //ft_push_swap_command.c
 
 void			ft_finish_rotation(t_stack_node **stack, t_stack_node *top_node,
 					char stack_name);
 void			ft_push_swap(t_stack_node **a, t_stack_node **b);
 
-//-----------------------------------------------------------------------------
-//test utils : delete before finishing the project
-
-void			ft_print_stack(t_stack_node	*node);
-void			ft_print_stack_reverse(t_stack_node	*node);
-
-//-----------------------------------------------------------------------------
 #endif

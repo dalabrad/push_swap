@@ -1,16 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_test_utils.c                                    :+:      :+:    :+:   */
+/*   ft_push_swap_utils.c                               :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dalabrad <dalabrad@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/05/24 13:02:11 by dalabrad          #+#    #+#             */
-/*   Updated: 2024/05/29 18:28:31 by dalabrad         ###   ########.fr       */
+/*   Created: 2024/06/05 12:21:23 by dalabrad          #+#    #+#             */
+/*   Updated: 2024/06/05 13:11:34 by dalabrad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
+
+/*Returns the maximum value of the two ints introduced*/
+int	ft_max(int n, int m)
+{
+	if (n > m)
+		return (n);
+	return (m);
+}
+
+/*	
+ * Returns true if node of b and its target in a are both 
+ * on top or above the median.
+ */
+bool	ft_both_ab_median(t_stack_node *b)
+{
+	if (b->above_median == b->target_node->above_median)
+		return (true);
+	return (false);
+}
+
 /*
  * Prints a stack:
  * n[0] = value_1 -> ... -> End of the Stack. 

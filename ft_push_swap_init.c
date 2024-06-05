@@ -6,7 +6,7 @@
 /*   By: dalabrad <dalabrad@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/29 16:38:31 by dalabrad          #+#    #+#             */
-/*   Updated: 2024/05/30 11:38:16 by dalabrad         ###   ########.fr       */
+/*   Updated: 2024/06/05 12:59:39 by dalabrad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -93,22 +93,29 @@ static void	ft_set_target_node(t_stack_node *a,
 */
 void	ft_set_price(t_stack_node *a, t_stack_node *b)
 {
-	int	size_a;
-	int	size_b;
+	int	s_a;
+	int	s_b;
 
 	if (!b || !a)
 		return ;
-	size_a = ft_stack_size(a);
-	size_b = ft_stack_size(b);
+	s_a = ft_stack_size(a);
+	s_b = ft_stack_size(b);
 	while (b)
 	{
-		b->push_price = b->index;
-		if (!(b->above_median))
-			b->push_price = size_b - b->index;
-		if (b->target_node->above_median)
-			b->push_price += b->target_node->index;
+		if (ft_both_ab_median(b) && b->above_median == true)
+			b->push_price = ft_max(b->index, b->target_node->index);
+		else if (ft_both_ab_median(b) && b->above_median == false)
+			b->push_price = ft_max(s_b - b->index, s_a - b->target_node->index);
 		else
-			b->push_price += size_a - b->target_node->index;
+		{
+			b->push_price = b->index;
+			if (!(b->above_median))
+				b->push_price = s_b - b->index;
+			if (b->target_node->above_median)
+				b->push_price += b->target_node->index;
+			else
+				b->push_price += s_a - b->target_node->index;
+		}
 		b = b->next;
 	}
 }
