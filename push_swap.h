@@ -6,7 +6,7 @@
 /*   By: dalabrad <dalabrad@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/20 16:10:54 by dalabrad          #+#    #+#             */
-/*   Updated: 2024/06/05 13:07:29 by dalabrad         ###   ########.fr       */
+/*   Updated: 2024/06/05 13:47:26 by dalabrad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,6 @@ typedef struct s_stack_node
 {
 	int					value;
 	int					index;
-	int					final_index;
 	int					push_price;
 	bool				above_median;
 	bool				cheapest;
